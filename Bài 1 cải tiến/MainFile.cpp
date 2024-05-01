@@ -9,8 +9,8 @@ fstream file("DSSV.txt", ios_base::app | ios_base::in);
 
 string file_dh = "DSSV_DH.txt";
 string file_cd = "DSSV_CD.txt";
-string file_topScore_dh = "topScore_DH.txt";
-string file_topScore_cd = "topScore_CD.txt";
+string file_topScore_dh = "topScore_DH.txt"; //Neu sua duong dan file nay, xin vui long sua luon duong dan trong cDanhSachSinhVienDH.cpp
+string file_topScore_cd = "topScore_CD.txt"; ////Neu sua duong dan file nay, xin vui long sua luon duong dan trong cDanhSachSinhVienCD.cpp
 
 void mainLoop(cDanhSachSinhVienDH&, cDanhSachSinhVienCD&);
 void option1(cDanhSachSinhVienDH& ds_sv_dh);
