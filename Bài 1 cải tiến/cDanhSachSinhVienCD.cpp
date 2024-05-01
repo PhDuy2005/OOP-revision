@@ -34,12 +34,40 @@ void cDanhSachSinhVienCD::readDataFromFile(const std::string& filename) {
     }
 }
 
+void updateNewTopScore(const string& filename, cCaoDang student)
+{
+    ifstream fileIn(filename, ios_base::in);
+    string str_top_score;
+    getline(fileIn, str_top_score);
+    float top_score = stof(str_top_score);
+    fileIn.close();
+
+    if (student.getAverageScore() > top_score) {
+        ofstream fileOut(filename);
+        fileOut << top_score << endl;
+        addDataIntoFile(filename, student);
+        fileOut.close();
+        return;
+    }
+
+    if (student.getAverageScore() == top_score) {
+        ofstream fileOut(filename, ios_base::app);
+        addDataIntoFile(filename, student);
+        fileOut.close();
+        return;
+    }
+
+    if (student.getAverageScore() < top_score)
+        return;
+}
+
 void cDanhSachSinhVienCD::getInputStudentFromConsole(const string& filename)
 {
     cCaoDang student;
     student.getInputInformation();
     DSSV.push_back(student);
     addDataIntoFile(filename, student);
+    updateNewTopScore("topScore_CD.txt", student);
 }
 
 void cDanhSachSinhVienCD::printTopScoreList(const string& filename)
@@ -73,7 +101,6 @@ void cDanhSachSinhVienCD::printTopScoreList(const string& filename)
         ss >> grad_score;
 
         cCaoDang student(id, name, addr, credit, avg_score, grad_score);
-        DSSV.push_back(student);
         student.printData();
     }
 

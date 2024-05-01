@@ -2,7 +2,6 @@
 #include <fstream>
 #include <cstdlib>
 using namespace std;
-#include <vector>
 #include "cDanhSachSinhVienDH.h"
 #include "cDanhSachSinhVienCD.h"
 
@@ -29,10 +28,10 @@ int main() {
 	cDanhSachSinhVienCD ds_sv_cd;
 	ds_sv_cd.readDataFromFile(file_cd);
 
-	//ds_sv_dh.getInputStudentFromConsole(file_dh);
-	//mainLoop(ds_sv_dh, ds_sv_cd);
-	//option4(ds_sv_cd);
-	option7(ds_sv_cd);
+	mainLoop(ds_sv_dh, ds_sv_cd);
+
+	cout << "Cam on vi da su dung chuong trinh!\n";
+	cout << "Neu chuong trinh co loi ki thuat, xin vui long gop y tai 23520384@gm.uit.edu.vn hoac qua cac hinh thuc tin nhan\n";
 	return 0;
 }
 
@@ -48,8 +47,63 @@ void mainLoop(cDanhSachSinhVienDH& ds_sv_dh, cDanhSachSinhVienCD& ds_sv_cd) {
 		cout << "5. Xuat danh sach sinh vien du dieu kien tot nghiep\n";
 		cout << "6. Tim sinh vien co diem trung binh cao nhat cua he DH\n";
 		cout << "7. Tim sinh vien co diem trung binh cao nhat cua he CD\n";
+		cout << "8. Xoa SV he DH theo MSSV\n";
+		cout << "9. Xoa SV he CD theo MSSV\n";
 		cout << "0. Ket thuc chuong trinh\n";
+		cout << "------------------------------------------------------\n";
+		cout << "Nhap chuc nang: ";
 		cin >> selection;
+
+		switch (selection) {
+		case 1:
+			option1(ds_sv_dh);
+			cout << "\n\nNhan enter de tiep tuc!";
+			system("pause");
+			break;
+		case 2:
+			option2(ds_sv_cd);
+			cout << "\n\nNhan enter de tiep tuc!";
+			system("pause");
+			break;
+		case 3:
+			option3(ds_sv_dh);
+			cout << "\n\nNhan enter de tiep tuc!";
+			system("pause");
+			break;
+		case 4:
+			option4(ds_sv_cd);
+			cout << "\n\nNhan enter de tiep tuc!";
+			system("pause");
+			break;
+		case 5:
+			option5(ds_sv_dh, ds_sv_cd);
+			cout << "\n\nNhan enter de tiep tuc!";
+			system("pause");
+			break;
+		case 6:
+			option6(ds_sv_dh);
+			cout << "\n\nNhan enter de tiep tuc!";
+			system("pause");
+			break;
+		case 7:
+			option7(ds_sv_cd);
+			cout << "\n\nNhan enter de tiep tuc!";
+			system("pause");
+			break;
+		case 8:
+		case 9:
+			cout << "Tinh nang chua duoc phat trien do lap trinh vien chua du trinh do";
+			cout << "\n\nNhan enter de tiep tuc!";
+			system("pause");
+			break;
+		case 0:
+			break;
+		default:
+			cout << "So khong hop le, nhan enter de ket thuc chuong trinh";
+			selection = 0;
+			system("pause");
+			break;
+		}
 	}
 }
 

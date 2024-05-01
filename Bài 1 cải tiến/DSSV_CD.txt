@@ -1,2 +1,3 @@
 23520384|Pham Tran Khanh Duy|23520384@gm.uit.edu.vn|126|8.65|0
 23520357|Tien Minh Duong|23520357@gm.uit.edu.vn|126|9.47|0
+235xxxx7|Van la Tien Minh Duong fake|Bac Lieu|126|9.47|6

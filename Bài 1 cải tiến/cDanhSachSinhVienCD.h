@@ -10,6 +10,7 @@ private:
 public:
 	cDanhSachSinhVienCD() {}
 
+	friend void updateNewTopScore(const string& filename, cCaoDang); 
 	void readDataFromFile(const string& filename);
 	void getInputStudentFromConsole(const string& filename);
 	int checkGraduateList();

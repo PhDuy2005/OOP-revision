@@ -121,8 +121,6 @@ void cDanhSachSinhVienDH::printTopScoreList(const string& filename)
     fileIn.close();
 }
 
-
-
 void cDanhSachSinhVienDH::printStudentList()
 {
     for (auto i = DSSV.begin(); i != DSSV.end(); i++)
