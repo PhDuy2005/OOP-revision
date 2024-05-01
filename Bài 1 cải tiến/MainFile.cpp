@@ -53,6 +53,7 @@ void mainLoop(cDanhSachSinhVienDH& ds_sv_dh, cDanhSachSinhVienCD& ds_sv_cd) {
 		cout << "------------------------------------------------------\n";
 		cout << "Nhap chuc nang: ";
 		cin >> selection;
+		system("cls");
 
 		switch (selection) {
 		case 1:
