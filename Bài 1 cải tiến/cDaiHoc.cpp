@@ -56,6 +56,7 @@ void addDataIntoFile(const string& filename, cDaiHoc student)
 		<< student.average_score << "|"
 		<< student.thesis_name << "|"
 		<< student.thesis_score << endl;
+	fileOut.close();
 }
 
 void cDaiHoc::printData() {

@@ -19,6 +19,8 @@ void option2(cDanhSachSinhVienCD& ds_sv_cd);
 void option3(cDanhSachSinhVienDH ds_sv_dh);
 void option4(cDanhSachSinhVienCD ds_sv_cd);
 void option5(cDanhSachSinhVienDH, cDanhSachSinhVienCD);
+void option6(cDanhSachSinhVienDH);
+void option7(cDanhSachSinhVienCD);
 
 int main() {
 	cDanhSachSinhVienDH ds_sv_dh;
@@ -30,7 +32,7 @@ int main() {
 	//ds_sv_dh.getInputStudentFromConsole(file_dh);
 	//mainLoop(ds_sv_dh, ds_sv_cd);
 	//option4(ds_sv_cd);
-	option5(ds_sv_dh, ds_sv_cd);
+	option7(ds_sv_cd);
 	return 0;
 }
 
@@ -74,4 +76,12 @@ void option5(cDanhSachSinhVienDH ds_sv_dh, cDanhSachSinhVienCD ds_sv_cd) {
 	int grad_dh = ds_sv_dh.checkGraduateList();
 	int grad_cd = ds_sv_cd.checkGraduateList();
 	cout << "Tong cong co " << grad_cd + grad_dh << " sinh vien du dieu kien tot nghiep, bao gom " << grad_dh << " sinh vien thuoc he DH va " << grad_cd << " sinh vien thuoc he cao dang";
+}
+
+void option6(cDanhSachSinhVienDH ds_sv_dh) {
+	ds_sv_dh.printTopScoreList(file_topScore_dh);
+}
+
+void option7(cDanhSachSinhVienCD ds_sv_cd) {
+	ds_sv_cd.printTopScoreList(file_topScore_cd);
 }

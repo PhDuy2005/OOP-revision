@@ -13,6 +13,11 @@ public:
 	void readDataFromFile(const string& filename);
 	void getInputStudentFromConsole(const string& filename);
 	int checkGraduateList();
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="filename">File topScore.txt</param>
+	void printTopScoreList(const string& filename);
 
 	void printStudentList();
 };

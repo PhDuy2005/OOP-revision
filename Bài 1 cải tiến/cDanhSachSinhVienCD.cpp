@@ -42,6 +42,44 @@ void cDanhSachSinhVienCD::getInputStudentFromConsole(const string& filename)
     addDataIntoFile(filename, student);
 }
 
+void cDanhSachSinhVienCD::printTopScoreList(const string& filename)
+{
+    ifstream fileIn(filename, ios_base::in);
+
+    if (!fileIn) {
+        cerr << "Unable to open\n";
+        return;
+    }
+
+    string str_top_score;
+    getline(fileIn, str_top_score);
+    float top_score = stof(str_top_score);
+    cout << "Duoi day la DSSV he CD co diem cao nhat (" << top_score << "):\n";
+
+    string line;
+    while (std::getline(fileIn, line)) {
+        istringstream ss(line);
+        string id, name, addr;
+        int credit;
+        float avg_score, grad_score;
+
+        getline(ss, id, '|');
+        getline(ss, name, '|');
+        getline(ss, addr, '|');
+        ss >> credit;
+        ss.ignore(1, '|');
+        ss >> avg_score;
+        ss.ignore(1, '|');
+        ss >> grad_score;
+
+        cCaoDang student(id, name, addr, credit, avg_score, grad_score);
+        DSSV.push_back(student);
+        student.printData();
+    }
+
+    fileIn.close();
+}
+
 void cDanhSachSinhVienCD::printStudentList()
 {
     for (auto i = DSSV.begin(); i != DSSV.end(); i++)

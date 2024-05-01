@@ -22,5 +22,6 @@ public:
 	bool ableToGraduate();
 
 	friend void addDataIntoFile(const string& filename, cDaiHoc);
+	//bool checkNewTopScore();
 };
 

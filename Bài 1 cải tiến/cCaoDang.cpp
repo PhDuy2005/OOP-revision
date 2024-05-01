@@ -50,6 +50,7 @@ void addDataIntoFile(const string& filename, cCaoDang student)
 		<< student.credit << "|"
 		<< student.average_score << "|"
 		<< student.graduate_score << endl;
+	fileOut.close();
 }
 
 void cCaoDang::printData() {
