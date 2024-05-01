@@ -1,0 +1,4 @@
+23520384|Pham Tran Khanh Duy|23520384@gm.uit.edu.vn|126|8.65|Unknown|0
+23520357|Tien Minh Duong|23520357@gm.uit.edu.vn|126|9.47|Unknown|0
+12345678|Tester's input|Chuk, GO! Di An|126|0|Cach fix bug giua sieu thi|8
+123|test|test|5|26|test inp|5
