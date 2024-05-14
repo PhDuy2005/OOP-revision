@@ -140,3 +140,7 @@ void option6(cDanhSachSinhVienDH ds_sv_dh) {
 void option7(cDanhSachSinhVienCD ds_sv_cd) {
 	ds_sv_cd.printTopScoreList(file_topScore_cd);
 }
+
+void option8(){
+	cout << "Nothing here";
+}
