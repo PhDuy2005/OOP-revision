@@ -23,6 +23,7 @@ float cCaoDang::getAverageScore()
 void cCaoDang::getInputInformation()
 {
 	cout << "Nhap MSSV: ";
+	cin.ignore();
 	getline(cin, student_ID);
 
 	cout << "Nhap ho ten cua SV: ";

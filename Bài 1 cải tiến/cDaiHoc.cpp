@@ -24,6 +24,7 @@ float cDaiHoc::getAverageScore()
 void cDaiHoc::getInputInformation()
 {
 	cout << "Nhap MSSV: ";
+	cin.ignore();
 	getline(cin, student_ID);
 
 	cout << "Nhap ho ten cua SV: ";
